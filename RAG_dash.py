@@ -18,8 +18,8 @@ load_dotenv()
 openai.api_key = os.getenv('OPENAI_API_KEY')
 
 # Define paths for Chroma and data storage
-CHROMA_PATH = "chroma1//chroma_law"
-DATA_PATH = "data1//law"
+CHROMA_PATH = "chroma//v_db"
+DATA_PATH = "data//pdf"
 
 # Prompt templates for different use cases
 PROMPTS = {
@@ -38,7 +38,7 @@ Answer the question in detail (max 2 paragraphs) only if needed otherwise answer
 }
 
 # Initialize Streamlit app
-st.title("Enhanced RAG QA : Chatbot for the law domain")
+st.title("pdf QnA : Dashboard (RAG)")
 
 # Sidebar for selecting embedding and chat models
 st.sidebar.header("Settings")
