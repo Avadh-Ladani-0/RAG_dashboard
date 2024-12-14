@@ -1,4 +1,5 @@
 .env
+.gitignore
 ex.py
 ex.ipynb
 venv/
