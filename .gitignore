@@ -1,0 +1,8 @@
+.env
+ex.py
+ex.ipynb
+venv/
+chroma/
+chroma_game/
+data/
+data1/
