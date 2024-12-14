@@ -1,5 +1,8 @@
 .env
+<<<<<<< HEAD
 dockerfile
+=======
+>>>>>>> 2316c17f4c446297680ecaead1267c98841f8767
 ex.py
 ex.ipynb
 venv/
