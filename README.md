@@ -1,47 +1,94 @@
-# Langchain RAG Tutorial
+# RAG Dash: Retrieval-Augmented Generation Framework
 
-## Install dependencies
+## Overview
+This repository implements a **Retrieval-Augmented Generation (RAG)** pipeline for efficient document-based question answering. The core functionality is encapsulated in the `RAG_dash.py` script, which integrates document processing, embeddings comparison, and query handling into a seamless pipeline.
 
-1. Do the following before installing the dependencies found in `requirements.txt` file because of current challenges installing `onnxruntime` through `pip install onnxruntime`. 
+### Key Features:
+- **Document Preprocessing**: Load and preprocess PDF documents, chunking text for embedding storage.
+- **Embeddings Management**: Compare document embeddings for precise retrieval of relevant information.
+- **Query Handling**: Retrieve context-specific answers from documents using OpenAI embeddings.
+- **Streamlit Dashboard**: A user-friendly interface to interact with the RAG pipeline.
 
-    - For MacOS users, a workaround is to first install `onnxruntime` dependency for `chromadb` using:
-
-    ```python
-     conda install onnxruntime -c conda-forge
-    ```
-    See this [thread](https://github.com/microsoft/onnxruntime/issues/11037) for additonal help if needed. 
-
-     - For Windows users, follow the guide [here](https://github.com/bycloudai/InstallVSBuildToolsWindows?tab=readme-ov-file) to install the Microsoft C++ Build Tools. Be sure to follow through to the last step to set the enviroment variable path.
-
-
-2. Now run this command to install dependenies in the `requirements.txt` file. 
-
-```python
-pip install -r requirements.txt
+## Folder Structure
+```
+├── .gitignore              # Files and directories to ignore
+├── RAG_dash.py             # Main application script with the integrated RAG pipeline
+├── create_database.py      # Script for generating embeddings and storing them in a vector database
+├── compare_embeddings.py   # Script for comparing document embeddings
+├── query_data.py           # Script for querying the vector database
+├── streamlit_game.py       # Additional streamlit demo application
+├── streamlit_storm.py      # Additional streamlit demo application
+├── requirements.txt        # Required dependencies
+├── README.md               # Project documentation
 ```
 
-3. Install markdown depenendies with: 
+## Prerequisites
+Before you begin, ensure you have the following installed:
+- Python 3.8 or higher
+- pip (Python package manager)
 
-```python
-pip install "unstructured[md]"
+## Installation
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/<your-username>/RAG_Dash.git
+   cd RAG_Dash
+   ```
+
+2. Install the required dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. Set up your OpenAI API key:
+   - Obtain your API key from the [OpenAI platform](https://platform.openai.com/).
+   - Add it to your environment variables or directly into the scripts (not recommended for production).
+
+## Usage
+
+### Running the Main Application
+To launch the Streamlit dashboard:
+```bash
+streamlit run RAG_dash.py
 ```
 
-## Create database
+This will open a browser window where you can:
+- Upload PDF documents.
+- Query the documents for answers.
+- View source references for each answer.
 
-Create the Chroma DB.
+### Additional Scripts
+- **`create_database.py`**: Preprocess PDFs and save their embeddings to a vector database.
+- **`compare_embeddings.py`**: Compare embeddings to identify the most relevant chunks for a given query.
+- **`query_data.py`**: Query the vector database for answers and fetch relevant documents.
 
-```python
-python create_database.py
+### Demo Applications
+You can also explore the demo applications:
+- `streamlit_game.py`
+- `streamlit_storm.py`
+
+Run them using:
+```bash
+streamlit run <filename>.py
 ```
 
-## Query the database
+## Project Flow
+1. **Document Processing**: Upload PDFs, split them into chunks, and generate embeddings using `create_database.py`.
+2. **Querying**: Use `RAG_dash.py` to input a query and retrieve results, complete with source references.
 
-Query the Chroma DB.
+## Contributing
+We welcome contributions! If you'd like to contribute:
+1. Fork the repository.
+2. Create a feature branch (`git checkout -b feature-branch`).
+3. Commit your changes (`git commit -m "Add feature"`).
+4. Push to the branch (`git push origin feature-branch`).
+5. Open a pull request.
 
-```python
-python query_data.py "How does Alice meet the Mad Hatter?"
-```
+## License
+This project is licensed under the MIT License. See the LICENSE file for details.
 
-> You'll also need to set up an OpenAI account (and set the OpenAI key in your environment variable) for this to work.
+## Acknowledgments
+- **OpenAI** for their embeddings API.
+- **LangChain** and **Chroma** for facilitating document management and vector database integration.
 
-Here is a step-by-step tutorial video: [RAG+Langchain Python Project: Easy AI/Chat For Your Docs](https://www.youtube.com/watch?v=tcqEUSNCn8I&ab_channel=pixegami).
+---
+For any questions or issues, feel free to create an issue or reach out to me at [your-email@example.com].
