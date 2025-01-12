@@ -40,7 +40,8 @@ Before you begin, ensure you have the following installed:
    ```
 
 3. Set up your OpenAI API key:
-   - Obtain your API key from the [OpenAI platform](https://platform.openai.com/).
+   - Obtain your API key from the [OpenAI platform](https://platform.openai.com/) or for llama/mistral setup download and setup ollama from ollama download llama/mistral.
+   - save your openai api key on .env 
    - Add it to your environment variables or directly into the scripts (not recommended for production).
 
 ## Usage
@@ -91,4 +92,4 @@ This project is licensed under the MIT License. See the LICENSE file for details
 - **LangChain** and **Chroma** for facilitating document management and vector database integration.
 
 ---
-For any questions or issues, feel free to create an issue or reach out to me at [your-email@example.com].
+For any questions or issues, feel free to create an issue or reach out to me at [avadhladani2002@gmail.com].
