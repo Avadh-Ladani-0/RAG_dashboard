@@ -16,8 +16,8 @@ This repository implements a **Retrieval-Augmented Generation (RAG)** pipeline f
 ├── create_database.py      # Script for generating embeddings and storing them in a vector database
 ├── compare_embeddings.py   # Script for comparing document embeddings
 ├── query_data.py           # Script for querying the vector database
-├── streamlit_game.py       # Additional streamlit demo application
-├── streamlit_storm.py      # Additional streamlit demo application
+├── streamlit_game.py       # Additional streamlit demo application (beta)
+├── streamlit_storm.py      # Additional streamlit demo application (beta)
 ├── requirements.txt        # Required dependencies
 ├── README.md               # Project documentation
 ```
