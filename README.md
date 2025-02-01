@@ -30,8 +30,8 @@ Before you begin, ensure you have the following installed:
 ## Installation
 1. Clone this repository:
    ```bash
-   git clone https://github.com/<your-username>/RAG_Dash.git
-   cd RAG_Dash
+   git clone https://github.com/Avadh-Ladani-0/RAG_dashboard.git
+   cd RAG_dashboard
    ```
 
 2. Install the required dependencies:
